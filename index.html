@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亮的個人網頁</title>
+    <style>
+        /* 基本樣式 */
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* 頁首樣式 */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        /* 導航樣式 */
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* 內容區域樣式 */
+        .content-section {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        /* 個人照片樣式 */
+        .profile-photo {
+            max-width: 200px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        /* 社交媒體連結樣式 */
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        /* 活動紀錄樣式 */
+        .activity-log {
+            list-style-type: none;
+            padding: 0;
+        }
+        .activity-log li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+        /* 下載按鈕樣式 */
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>亮的個人網頁</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#personal-info">個人資訊</a></li>
+            <li><a href="#social-media">社交媒體</a></li>
+            <li><a href="#photos">個人照片</a></li>
+            <li><a href="#activities">活動紀錄</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="personal-info" class="content-section">
+            <h2>個人資訊</h2>
+            <img src="你的照片URL" alt="個人照片" class="profile-photo">
+            <p>在這裡填寫您的個人簡介和資訊。</p>
+        </section>
+
+        <section id="social-media" class="content-section">
+            <h2>社交媒體連結</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100027327703738" target="_blank">Facebook</a>
+                <!-- 可以添加其他社交媒體連結 -->
+            </div>
+        </section>
+
+        <section id="photos" class="content-section">
+            <h2>個人照片展示</h2>
+            <!-- 這裡可以放置照片展示的代碼，例如圖片輪播或相簿 -->
+            <p>這裡將展示您的個人照片。</p>
+        </section>
+
+        <section id="activities" class="content-section">
+            <h2>活動紀錄</h2>
+            <ul class="activity-log">
+                <li>2024年6月30日：參加了某某活動</li>
+                <li>2024年6月15日：完成了某某項目</li>
+                <!-- 可以繼續添加更多活動紀錄 -->
+            </ul>
+        </section>
+
+        <a href="#" class="download-btn" onclick="alert('檔案下載功能尚未實現')">下載檔案</a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 亮的個人網頁。保留所有權利。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 這裡可以添加JavaScript代碼，例如處理照片展示、活動紀錄更新等功能
+        // 示例：動態更新活動紀錄
+        function addActivity(date, description) {
+            const activityList = document.querySelector('.activity-log');
+            const newActivity = document.createElement('li');
+            newActivity.textContent = `${date}：${description}`;
+            activityList.prepend(newActivity);
+        }
+
+        // 使用說明
+        console.log("使用說明：");
+        console.log("1. 更新個人資訊：修改 #personal-info 部分的內容。");
+        console.log("2. 更新社交媒體連結：在 #social-media 部分添加或修改連結。");
+        console.log("3. 添加照片：在 #photos 部分添加您的照片。");
+        console.log("4. 更新活動紀錄：使用 addActivity() 函數添加新的活動。");
+    </script>
+</body>
+</html>
